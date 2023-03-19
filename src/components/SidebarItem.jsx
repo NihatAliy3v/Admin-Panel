@@ -14,8 +14,12 @@ export const SidebarItem = ({ itemName, subItem, itemPath }) => {
       {opened && (
         <ul className="drop-list">
           <li className="drop-item">
-            {subItem.map((subItem) => (
-              <Link to={`/${subItem.itemPath}`} className="nav-link">
+            {subItem.map((subItem, index) => (
+              <Link
+                to={`/${subItem.itemPath}`}
+                key={index}
+                className="nav-link"
+              >
                 {subItem.itemName}
               </Link>
             ))}

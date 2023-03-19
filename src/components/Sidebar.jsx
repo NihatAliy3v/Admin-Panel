@@ -15,8 +15,17 @@ export const SideBar = () => {
       itemName: "categories",
       subItem: [
         {
-          itemName: "add categories",
-          itemPath: "add-categories",
+          itemName: "category",
+          itemPath: "category",
+        },
+      ],
+    },
+    {
+      itemName: "sub categories",
+      subItem: [
+        {
+          itemName: "sub categories",
+          itemPath: "sub-category",
         },
       ],
     },
@@ -35,7 +44,7 @@ export const SideBar = () => {
     <div className="sidebar">
       <nav className="side-nav">
         <ul className="nav-list">
-          {sidebarItem.map((item,index) => (
+          {sidebarItem.map((item, index) => (
             <SidebarItem
               key={index}
               itemName={item.itemName}

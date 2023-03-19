@@ -1,0 +1,31 @@
+.head-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+  .breadcrumb {
+    line-height: 13px;
+    .prevent-link,
+    .lastest {
+      color: #5c4d3f;
+      font-size: 15px;
+      font-weight: 400;
+    }
+    .prevent-link {
+      color: #88aaf3;
+      margin-right: 6px;
+    }
+    .arright-icon {
+      font-size: 12px;
+    }
+    .lastest {
+      margin-left: 6px;
+    }
+  }
+  .title {
+    font-size: 25px;
+    color: #56606e;
+    font-weight: 500;
+  }
+}

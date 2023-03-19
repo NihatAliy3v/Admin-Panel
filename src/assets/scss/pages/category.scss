@@ -1,0 +1,23 @@
+.category {
+  padding-top: 75px;
+  .wrapper {
+    display: flex;
+    width: 100%;
+    .category-main {
+      padding: 30px;
+      width: 82%;
+      .main-wrapper {
+        display: flex;
+        .main-left {
+          select {
+            height: 30px;
+            margin-top: 20px;
+            outline: none;
+            option {
+            }
+          }
+        }
+      }
+    }
+  }
+}

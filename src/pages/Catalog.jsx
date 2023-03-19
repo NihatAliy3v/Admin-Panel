@@ -1,14 +1,18 @@
-import { useEffect, useState } from "react";
-import { Input } from "../components/Input";
-import { SideBar } from "../components/Sidebar";
+//Axios
 import axios from "axios";
-import { Link } from "react-router-dom";
-import { VscChevronRight } from "react-icons/vsc";
+// Hooks
+import { useEffect, useState } from "react";
+// Components
+import { SideBar } from "../components/Sidebar";
+import { AddNewForm } from "../components/AddNewForm";
+// Icons
+
+import { HeadTitle } from "../components/HeadTitle";
+import { Table } from "../components/Table";
 
 const AddCatalog = () => {
   const [catalogName, setCatalogName] = useState("");
   const [dataCatalog, setDataCatalog] = useState([]);
-  const [catalogId, setCatalogId] = useState(0);
   useEffect(() => {
     getCatalogs();
   }, []);
@@ -40,47 +44,24 @@ const AddCatalog = () => {
       <section className="wrapper">
         <SideBar />
         <div className="catalog-main">
-          <div className="head-title">
-            <h1 className="title">Catalog</h1>
-            <div className="breadcrumb">
-              <Link to="/" className="prevent-link">
-                Home
-              </Link>
-              <VscChevronRight className="arright-icon" />
-              <span className="lastest">Catalog</span>
-            </div>
-          </div>
+          <HeadTitle pageName="Catalog" />
 
-          <div className="add-new-catalog">
-            <div className="catalog-card">
-              <h2 className="card-title">Add New Category</h2>
-              <form className="form" onSubmit={(e) => catalogSubmit(e)}>
-                <label htmlFor="catalogName">Name</label>
-                <Input
-                  type="text"
-                  name="catalogName"
-                  value={catalogName}
-                  onChange={(e) => setCatalogName(e.target.value)}
-                  id="catalogName"
-                />
-                <button className="catalog-add">Submit</button>
-              </form>
-            </div>
-          </div>
-
-          {dataCatalog?.map((item, index) => {
-            return (
-              <div key={index} className="map">
-                <p>{item?.catalogName}</p>
-                <button
-                  className="btn"
-                  onClick={() => catalogDelete(item?.catalogId)}
-                >
-                  Delete
-                </button>
-              </div>
-            );
-          })}
+          <section className="main-wrapper">
+            <AddNewForm
+              onSubmit={(e) => catalogSubmit(e)}
+              onChange={(e) => setCatalogName(e.target.value)}
+              inputValue={catalogName}
+              inputName="catalogName"
+              inputId="catalogName"
+              inputType="text"
+              cardTitle="Add New Catalog"
+            />
+            <Table
+              data={dataCatalog}
+              handleDelete={catalogDelete}
+              catalog={true}
+            />
+          </section>
         </div>
       </section>
     </main>
