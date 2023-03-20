@@ -1,0 +1,16 @@
+.material {
+    padding-top: 75px;
+    .wrapper {
+      display: flex;
+      width: 100%;
+      .material-main {
+        padding: 30px;
+        width: 82%;
+  
+        .main-wrapper {
+          display: flex;
+        }
+      }
+    }
+  }
+  

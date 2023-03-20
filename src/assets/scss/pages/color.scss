@@ -1,0 +1,16 @@
+.color {
+    padding-top: 75px;
+    .wrapper {
+      display: flex;
+      width: 100%;
+      .color-main {
+        padding: 30px;
+        width: 82%;
+  
+        .main-wrapper {
+          display: flex;
+        }
+      }
+    }
+  }
+  

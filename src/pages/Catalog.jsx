@@ -4,11 +4,11 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 // Components
 import { SideBar } from "../components/Sidebar";
-import { AddNewForm } from "../components/AddNewForm";
 // Icons
 
 import { HeadTitle } from "../components/HeadTitle";
 import { Table } from "../components/Table";
+import { Input } from "../components/Input";
 
 const AddCatalog = () => {
   const [catalogName, setCatalogName] = useState("");
@@ -47,15 +47,22 @@ const AddCatalog = () => {
           <HeadTitle pageName="Catalog" />
 
           <section className="main-wrapper">
-            <AddNewForm
-              onSubmit={(e) => catalogSubmit(e)}
-              onChange={(e) => setCatalogName(e.target.value)}
-              inputValue={catalogName}
-              inputName="catalogName"
-              inputId="catalogName"
-              inputType="text"
-              cardTitle="Add New Catalog"
-            />
+            <div className="add-new">
+              <div className="card">
+                <h2 className="card-title">Add New Category</h2>
+                <form className="form" onSubmit={(e) => catalogSubmit(e)}>
+                  <label htmlFor="catalogName">Name</label>
+                  <Input
+                    type="text"
+                    name="catalogName"
+                    value={catalogName}
+                    onChange={(e) => setCatalogName(e.target.value)}
+                    id="catalogName"
+                  />
+                  <button className="add-btn">Submit</button>
+                </form>
+              </div>
+            </div>
             <Table
               data={dataCatalog}
               handleDelete={catalogDelete}

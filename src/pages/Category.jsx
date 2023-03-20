@@ -3,11 +3,10 @@ import React, { useEffect, useState } from "react";
 // Axios
 import axios from "axios";
 // Components
-import { AddNewForm } from "../components/AddNewForm";
 import { HeadTitle } from "../components/HeadTitle";
 import { SideBar } from "../components/Sidebar";
 import { Table } from "../components/Table";
-import { MyComponent } from "../components/Select";
+import { Input } from "../components/Input";
 
 const Category = () => {
   // Category
@@ -57,15 +56,22 @@ const Category = () => {
           <HeadTitle pageName="Category" />
           <section className="main-wrapper">
             <div className="main-left">
-              <AddNewForm
-                onSubmit={(e) => categorySubmit(e)}
-                onChange={(e) => setCategoryName(e.target.value)}
-                inputValue={categoryName}
-                inputName="categoryName"
-                inputId="categoryName"
-                inputType="text"
-                cardTitle="Add New Category"
-              />
+              <div className="add-new">
+                <div className="card">
+                  <h2 className="card-title">Add New Category</h2>
+                  <form className="form" onSubmit={(e) => categorySubmit(e)}>
+                    <label htmlFor="categoryName">Name</label>
+                    <Input
+                      type="text"
+                      name="categoryName"
+                      value={categoryName}
+                      onChange={(e) => setCategoryName(e.target.value)}
+                      id="categoryName"
+                    />
+                    <button className="add-btn">Submit</button>
+                  </form>
+                </div>
+              </div>
               <select
                 className="select"
                 value={catalogId}

@@ -30,11 +30,29 @@ export const SideBar = () => {
       ],
     },
     {
+      itemName: "color",
+      subItem: [
+        {
+          itemName: "color",
+          itemPath: "color",
+        },
+      ],
+    },
+    {
+      itemName: "Material",
+      subItem: [
+        {
+          itemName: "material",
+          itemPath: "material",
+        },
+      ],
+    },
+    {
       itemName: "products",
       subItem: [
         {
-          itemName: "add products",
-          itemPath: "add-products",
+          itemName: "products",
+          itemPath: "products",
         },
       ],
     },

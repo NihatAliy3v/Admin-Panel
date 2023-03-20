@@ -3,10 +3,10 @@ import React, { useEffect, useState } from "react";
 // Axios
 import axios from "axios";
 // Components
-import { AddNewForm } from "../components/AddNewForm";
 import { HeadTitle } from "../components/HeadTitle";
 import { SideBar } from "../components/Sidebar";
 import { Table } from "../components/Table";
+import { Input } from "../components/Input";
 
 const SubCategory = () => {
   // Category
@@ -55,15 +55,22 @@ const SubCategory = () => {
         <div className="sub-category-main">
           <HeadTitle pageName="Sub Category" />
           <section className="main-wrapper">
-            <AddNewForm
-              onSubmit={(e) => subCategorySubmit(e)}
-              onChange={(e) => setSubCategoryName(e.target.value)}
-              inputValue={subCategoryName}
-              inputName="subCategoryName"
-              inputId="subCategoryName"
-              inputType="text"
-              cardTitle="Add New Sub Category"
-            />
+            <div className="add-new">
+              <div className="card">
+                <h2 className="card-title">Add New Sub Category</h2>
+                <form className="form" onSubmit={(e) => subCategorySubmit(e)}>
+                  <label htmlFor="subCategoryName">Name</label>
+                  <Input
+                    type="text"
+                    name="subCategoryName"
+                    value={subCategoryName}
+                    onChange={(e) => setSubCategoryName(e.target.value)}
+                    id="subCategoryName"
+                  />
+                  <button className="add-btn">Submit</button>
+                </form>
+              </div>
+            </div>
             <Table
               data={dataSubCategory}
               handleDelete={subCategoryDelete}
