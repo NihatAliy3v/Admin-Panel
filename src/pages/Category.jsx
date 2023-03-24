@@ -68,25 +68,25 @@ const Category = () => {
                       onChange={(e) => setCategoryName(e.target.value)}
                       id="categoryName"
                     />
+                    <select
+                      className="select"
+                      value={catalogId}
+                      onChange={(e) => setCatalogId(e.target.value)}
+                    >
+                      {dataCatalog?.map((item, index) => (
+                        <option
+                          key={index}
+                          onChange={(e) => setCatalogId(item?.catalogId)}
+                          value={item?.catalogId}
+                        >
+                          {item?.catalogName}
+                        </option>
+                      ))}
+                    </select>
                     <button className="add-btn">Submit</button>
                   </form>
                 </div>
               </div>
-              <select
-                className="select"
-                value={catalogId}
-                onChange={(e) => setCatalogId(e.target.value)}
-              >
-                {dataCatalog?.map((item, index) => (
-                  <option
-                    key={index}
-                    onChange={(e) => setCatalogId(item?.catalogId)}
-                    value={item?.catalogId}
-                  >
-                    {item?.catalogName}
-                  </option>
-                ))}
-              </select>
             </div>
             <Table
               data={dataCategory}

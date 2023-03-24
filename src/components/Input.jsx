@@ -1,4 +1,4 @@
-export const Input = ({ type, name, onChange,id }) => {
+export const Input = ({ type, name, onChange, id, placeholder }) => {
   return (
     <div className="input-container">
       <input
@@ -6,6 +6,7 @@ export const Input = ({ type, name, onChange,id }) => {
         name={name}
         onChange={onChange}
         id={id}
+        placeholder={placeholder}
       />
     </div>
   );

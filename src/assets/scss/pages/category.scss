@@ -4,10 +4,12 @@
     display: flex;
     width: 100%;
     .category-main {
-      padding: 30px;
       width: 82%;
+      padding: 30px;
+      margin-left: 250px;
       .main-wrapper {
         display: flex;
+        align-items: flex-start;
         .main-left {
           select {
             height: 30px;

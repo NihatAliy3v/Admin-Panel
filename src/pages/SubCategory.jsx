@@ -67,6 +67,21 @@ const SubCategory = () => {
                     onChange={(e) => setSubCategoryName(e.target.value)}
                     id="subCategoryName"
                   />
+                  <select
+                    className="select"
+                    value={categoryId}
+                    onChange={(e) => setCategoryId(e.target.value)}
+                  >
+                    {dataCategory?.map((item, index) => (
+                      <option
+                        key={index}
+                        onChange={(e) => setCategoryId(item?.catalogId)}
+                        value={item?.categoryId}
+                      >
+                        {item?.categoryName}
+                      </option>
+                    ))}
+                  </select>
                   <button className="add-btn">Submit</button>
                 </form>
               </div>
@@ -77,21 +92,6 @@ const SubCategory = () => {
               subCategory={true}
             />
           </section>
-          <select
-            className="select"
-            value={categoryId}
-            onChange={(e) => setCategoryId(e.target.value)}
-          >
-            {dataCategory?.map((item, index) => (
-              <option
-                key={index}
-                onChange={(e) => setCategoryId(item?.catalogId)}
-                value={item?.categoryId}
-              >
-                {item?.categoryName}
-              </option>
-            ))}
-          </select>
         </div>
       </section>
     </main>

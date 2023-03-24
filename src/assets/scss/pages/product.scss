@@ -1,16 +1,76 @@
 .product {
-    padding-top: 75px;
-    .wrapper {
-      display: flex;
-      width: 100%;
-      .product-main {
-        padding: 30px;
-        width: 82%;
-  
-        .main-wrapper {
-          display: flex;
+  padding-top: 75px;
+  .wrapper {
+    display: flex;
+    width: 100%;
+    .product-main {
+      padding: 30px;
+      margin-left: 250px;
+      width: 82%;
+      .main-wrapper {
+        display: flex;
+        align-items: flex-start;
+        .main-left {
+          .upload-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .upload-label {
+              margin-top: 20px;
+              font-size: 50px;
+              cursor: pointer;
+
+              .input-container {
+                display: none;
+              }
+              #productImage {
+                display: none;
+              }
+            }
+            select {
+              height: 30px;
+              width: 50%;
+              margin: 5px auto;
+            }
+            button {
+              text-transform: capitalize;
+              outline: none;
+              border: none;
+              background-color: #88aaf3;
+              padding: 9px 16px;
+              color: #fff;
+              font-size: 14px;
+              border: 1px solid #88aaf3;
+              border-radius: 15px;
+              cursor: pointer;
+              margin-top: 10px;
+            }
+          }
         }
       }
     }
   }
-  
+}
+
+
+.popup-content {
+  margin: auto;
+  background: rgb(255, 255, 255);
+  width: 50%;
+  padding: 5px;
+
+}
+.popup-arrow {
+  color: rgb(255, 255, 255);
+}
+[role='tooltip'].popup-content {
+  width: 200px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+}
+
+.popup-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+[data-popup='tooltip'].popup-overlay {
+  background: transparent;
+}

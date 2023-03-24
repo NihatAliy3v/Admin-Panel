@@ -1,16 +1,16 @@
 .color {
-    padding-top: 75px;
-    .wrapper {
-      display: flex;
-      width: 100%;
-      .color-main {
-        padding: 30px;
-        width: 82%;
-  
-        .main-wrapper {
-          display: flex;
-        }
+  padding-top: 75px;
+  .wrapper {
+    display: flex;
+    width: 100%;
+    .color-main {
+      padding: 30px;
+      margin-left: 250px;
+      width: 82%;
+      .main-wrapper {
+        display: flex;
+        align-items: flex-start;
       }
     }
   }
-  
+}

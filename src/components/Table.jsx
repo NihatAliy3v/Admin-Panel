@@ -18,15 +18,17 @@ export const Table = ({
         <thead>
           <tr>
             {(category || catalog) && <th>Catalog id</th>}
-            {catalog && <th>Catalog Name</th>}
+            {(catalog || product) && <th>Catalog </th>}
             {(category || subCategory) && <th>Category id</th>}
-            {category && <th>Category Name</th>}
+            {(category || product) && <th>Category </th>}
             {subCategory && <th>Sub Category id</th>}
-            {subCategory && <th>Sub Category Name</th>}
+            {(subCategory || product) && <th>Sub Category </th>}
             {color && <th>Color Id</th>}
-            {color && <th>Color Name</th>}
+            {(color || product) && <th>Color </th>}
             {material && <th>Material Id</th>}
-            {material && <th>Material Name</th>}
+            {(material || product) && <th>Material </th>}
+            {product && <th>Product</th>}
+
             <th>Action</th>
           </tr>
         </thead>
@@ -34,16 +36,17 @@ export const Table = ({
           {data?.map((item, index) => {
             return (
               <tr key={index}>
-                {item.catalogId && <td>{item?.catalogId}</td>}
-                {item.catalogName && <td>{item?.catalogName}</td>}
-                {item.categoryId && <td>{item?.categoryId}</td>}
-                {item.categoryName && <td>{item?.categoryName}</td>}
-                {item.subCategoryId && <td>{item?.subCategoryId}</td>}
-                {item.subCategoryName && <td>{item?.subCategoryName}</td>}
-                {item?.colorId && <td>{item?.colorId}</td>}
-                {item?.colorName && <td>{item?.colorName}</td>}
-                {item?.materialId && <td>{item?.materialId}</td>}
-                {item?.materialName && <td>{item?.materialName}</td>}
+                {(category || catalog) && <td>{item?.catalogId}</td>}
+                {(catalog || product) && <td>{item?.catalogName}</td>}
+                {(category || subCategory) && <td>{item?.categoryId}</td>}
+                {(category || product) && <td>{item?.categoryName}</td>}
+                {subCategory && <td>{item?.subCategoryId}</td>}
+                {(subCategory || product) && <td>{item?.subCategoryName}</td>}
+                {color && <td>{item?.colorId}</td>}
+                {(color || product) && <td>{item?.colorName}</td>}
+                {material && <td>{item?.materialId}</td>}
+                {(material || product) && <td>{item?.materialName}</td>}
+                {product && <td>{item?.productName}</td>}
 
                 <td>
                   <button className="edit-btn btn">
@@ -86,6 +89,14 @@ export const Table = ({
                     <button
                       className="delete-btn btn"
                       onClick={(e) => handleDelete(item?.materialId)}
+                    >
+                      <BsFillTrashFill className="delete-icon" />
+                    </button>
+                  )}
+                  {product && (
+                    <button
+                      className="delete-btn btn"
+                      onClick={(e) => handleDelete(item?.productId)}
                     >
                       <BsFillTrashFill className="delete-icon" />
                     </button>

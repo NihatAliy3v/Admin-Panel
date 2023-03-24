@@ -5,10 +5,11 @@
     width: 100%;
     .sub-category-main {
       padding: 30px;
+      margin-left: 250px;
       width: 82%;
-
       .main-wrapper {
         display: flex;
+        align-items: flex-start;
       }
     }
   }
