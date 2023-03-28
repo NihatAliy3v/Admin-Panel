@@ -49,17 +49,17 @@ const AddCatalog = () => {
           <section className="main-wrapper">
             <div className="add-new">
               <div className="card">
-                <h2 className="card-title">Add New Category</h2>
+                <h2 className="card-title">Add New Catalog</h2>
                 <form className="form" onSubmit={(e) => catalogSubmit(e)}>
-                  <label htmlFor="catalogName">Name</label>
                   <Input
                     type="text"
                     name="catalogName"
                     value={catalogName}
                     onChange={(e) => setCatalogName(e.target.value)}
                     id="catalogName"
+                    placeholder="Name"
                   />
-                  <button className="add-btn">Submit</button>
+                  <button className="btn-primary">Submit</button>
                 </form>
               </div>
             </div>

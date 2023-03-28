@@ -60,13 +60,13 @@ const Category = () => {
                 <div className="card">
                   <h2 className="card-title">Add New Category</h2>
                   <form className="form" onSubmit={(e) => categorySubmit(e)}>
-                    <label htmlFor="categoryName">Name</label>
                     <Input
                       type="text"
                       name="categoryName"
                       value={categoryName}
                       onChange={(e) => setCategoryName(e.target.value)}
                       id="categoryName"
+                      placeholder="Name"
                     />
                     <select
                       className="select"
@@ -83,7 +83,7 @@ const Category = () => {
                         </option>
                       ))}
                     </select>
-                    <button className="add-btn">Submit</button>
+                    <button className="btn-primary">Submit</button>
                   </form>
                 </div>
               </div>

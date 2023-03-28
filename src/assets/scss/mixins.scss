@@ -1,0 +1,19 @@
+@mixin button {
+  .btn-primary {
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    background-color: $btn-primary-color;
+    padding: 9px 16px;
+    color: $white;
+    font-size: 14px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s;
+    &:hover {
+      box-shadow: 0 3px 6px #c4c4c4;
+      background-color: $btn-secondary-color;
+    }
+  }
+}

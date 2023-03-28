@@ -2,7 +2,7 @@
   border-bottom: 1px solid #f3f3f3;
   position: fixed;
   width: 100%;
-  background-color: #fff;
+  background-color: $white;
   z-index: 999;
   .container {
     .row {
@@ -14,10 +14,10 @@
         width: 250px;
         height: 75px;
         padding-left: 25px;
-        border-right: 1px solid #f3f3f3;
+        border-right: 1px solid $search-border-color;
         .logo-text {
           font-size: 30px;
-          color: #56606e;
+          color: $primary-color;
         }
       }
       .navbar {
@@ -27,17 +27,16 @@
           width: 500px;
           input {
             width: 100%;
-
             font-size: 15px;
             line-height: 23px;
             padding: 8px 15px;
             border-radius: 15px;
-            color: #8a909d;
-            background-color: #f7f7f7;
+            color: $secondary-color;
+            background-color: $search-bg-color;
             border: none;
             outline: none;
             &::placeholder {
-              color: #8a909d;
+              color: $secondary-color;
             }
           }
           .search-icon {
@@ -45,7 +44,7 @@
             right: 10px;
             top: 50%;
             transform: translateY(-50%);
-            color: #8a909d;
+            color: $secondary-color;
             font-size: 17px;
           }
         }

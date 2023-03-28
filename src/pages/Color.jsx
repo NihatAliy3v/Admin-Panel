@@ -55,23 +55,23 @@ const Color = () => {
               <div className="card">
                 <h2 className="card-title">Add New Color</h2>
                 <form className="form" onSubmit={(e) => colorSubmit(e)}>
-                  <label htmlFor="colorName">Name</label>
                   <Input
                     type="text"
                     name="colorName"
                     value={colorName}
                     onChange={(e) => setColorName(e.target.value)}
                     id="colorName"
+                    placeholder="Name"
                   />
-                  <label htmlFor="colorHexCode">Hex Code</label>
                   <Input
                     type="text"
                     name="colorHexCode"
                     value={colorHexCode}
                     onChange={(e) => setColorHexCode(e.target.value)}
                     id="colorHexCode"
+                    placeholder="Hex Code"
                   />
-                  <button className="add-btn">Submit</button>
+                  <button className="btn-primary">Submit</button>
                 </form>
               </div>
             </div>

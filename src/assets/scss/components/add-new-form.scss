@@ -4,9 +4,9 @@
     border-radius: 15px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.03);
     width: fit-content;
-    background-color: #fff;
+    background-color: $white;
     .card-title {
-      color: #8a909d;
+      color: $secondary-color;
       font-size: 20px;
       padding-bottom: 20px;
       margin-bottom: 15px;
@@ -16,32 +16,12 @@
     .form {
       display: flex;
       flex-direction: column;
-      label {
-        display: block;
-        font-size: 15px;
-        font-weight: 500;
-        color: #8a909d;
-        padding: 10px 0;
-      }
-      .add-btn {
-        text-transform: capitalize;
-        outline: none;
-        border: none;
-        background-color: #88aaf3;
-        padding: 9px 16px;
-        color: #fff;
-        font-size: 14px;
-        border: 1px solid #88aaf3;
-        border-radius: 15px;
-        cursor: pointer;
-        margin-top: 10px;
-      }
+      @include button;
       select {
         width: 50%;
         margin: 5px auto;
         height: 30px;
       }
-    
     }
   }
 }

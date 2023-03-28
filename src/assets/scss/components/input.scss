@@ -1,15 +1,51 @@
 .input-container {
   width: 362px;
-  height: 45px;
-  margin-bottom: 10px;
+  height: 50px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+
+  .placeholder {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background-color: $white;
+    font-size: 16px;
+    font-weight: 500;
+    color: #777;
+    transition: all 0.1s;
+    user-select: none;
+    cursor: text;
+  }
+  &.focus {
+    .placeholder {
+      position: absolute;
+      top: 0px;
+      color: #777;
+      font-size: 13px;
+    }
+  }
+
   input {
     width: 100%;
     height: 100%;
     padding: 8px 17px;
     outline: none;
     border-radius: 15px;
-    border: 1px solid #eeeeee;
+    border: 1px solid $border-primary-color;
     color: #777;
     font-size: 15px;
+    transition: all 0.3s;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+    &:focus {
+      border-color: $border-secondary-color;
+    }
+    &:hover {
+      border-color: $border-secondary-color;
+    }
   }
 }

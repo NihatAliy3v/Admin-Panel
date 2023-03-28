@@ -9,8 +9,6 @@ import { Table } from "../components/Table";
 import { Input } from "../components/Input";
 import { BsUpload } from "react-icons/bs";
 
-import Swal from "sweetalert2";
-
 const Product = () => {
   const Swal = require("sweetalert2");
 
@@ -175,53 +173,53 @@ const Product = () => {
                 <div className="card">
                   <h2 className="card-title">Add New Product</h2>
                   <form className="form" onSubmit={(e) => productSubmit(e)}>
-                    <label htmlFor="productName">Name</label>
                     <Input
                       type="text"
                       name="productName"
                       value={productName}
                       onChange={(e) => setProductName(e.target.value)}
                       id="productName"
+                      placeholder="Name"
                     />
-                    <label htmlFor="productName">Code</label>
                     <Input
                       type="text"
                       name="productCode"
                       value={productCode}
                       onChange={(e) => setProductCode(e.target.value)}
                       id="productCode"
+                      placeholder="Code"
                     />
-                    <label htmlFor="productName">Price</label>
                     <Input
                       type="number"
                       name="price"
                       value={price}
                       onChange={(e) => setPrice(e.target.value)}
                       id="price"
+                      placeholder="Price"
                     />
-                    <label htmlFor="productName">Size</label>
                     <Input
                       type="text"
                       name="size"
                       value={size}
                       onChange={(e) => setSize(e.target.value)}
                       id="size"
+                      placeholder="Size"
                     />
-                    <label htmlFor="productName">Unist In Stock</label>
                     <Input
                       type="number"
                       name="unistInStock"
                       value={unistInStock}
                       onChange={(e) => setUnistInStock(e.target.value)}
                       id="unistInStock"
+                      placeholder="Unist"
                     />
-                    <label htmlFor="productName">Description</label>
                     <Input
                       type="text"
                       name="description"
                       value={description}
                       onChange={(e) => setDescription(e.target.value)}
                       id="description"
+                      placeholder="Description"
                     />
                     <select
                       value={catalogId}
@@ -280,7 +278,7 @@ const Product = () => {
                       ))}
                     </select>
 
-                    <button className="add-btn">Submit</button>
+                    <button className="btn-primary">Submit</button>
                   </form>
                 </div>
               </div>
@@ -306,7 +304,10 @@ const Product = () => {
                   ))}
                 </select>
 
-                <button onClick={(e) => productImageSubmit(e)}>
+                <button
+                  className="btn-primary"
+                  onClick={(e) => productImageSubmit(e)}
+                >
                   Product add
                 </button>
               </div>

@@ -8,12 +8,12 @@
     line-height: 13px;
     .prevent-link,
     .lastest {
-      color: #5c4d3f;
+      color: $primary-color;
       font-size: 15px;
       font-weight: 400;
     }
     .prevent-link {
-      color: #88aaf3;
+      color: $btn-primary-color;
       margin-right: 6px;
     }
     .arright-icon {
@@ -25,7 +25,7 @@
   }
   .title {
     font-size: 25px;
-    color: #56606e;
+    color: $primary-color;
     font-weight: 500;
   }
 }

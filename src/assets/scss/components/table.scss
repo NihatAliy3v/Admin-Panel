@@ -2,7 +2,7 @@
   padding: 24px 24px 40px;
   border-radius: 15px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.03);
-  background-color: #fff;
+  background-color: $white;
   width: fit-content;
   margin-left: 24px;
 
@@ -15,7 +15,7 @@
           font-size: 14px;
           font-weight: 500;
           padding: 15px 20px;
-          color: #56606e;
+          color: $primary-color;
         }
       }
     }
@@ -26,7 +26,7 @@
           font-size: 14px;
           font-weight: 400;
           padding: 15px 20px;
-          color: #8a909d;
+          color: $secondary-color;
           .btn {
             display: block;
             background-color: transparent;
@@ -37,14 +37,14 @@
           }
           .edit-btn {
             .edit-icon {
-              color: green;
+              color: $edit-color;
               font-size: 15px;
             }
           }
           .delete-btn {
             margin-left: 8px;
             .delete-icon {
-              color: red;
+              color: $delete-color;
               font-size: 15px;
             }
           }

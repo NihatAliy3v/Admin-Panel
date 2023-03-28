@@ -55,15 +55,15 @@ const Material = () => {
               <div className="card">
                 <h2 className="card-title">Add New Material</h2>
                 <form className="form" onSubmit={(e) => materialSubmit(e)}>
-                  <label htmlFor="materialName">Name</label>
                   <Input
                     type="text"
                     name="materialName"
                     value={materialName}
                     onChange={(e) => setMaterialName(e.target.value)}
                     id="materialName"
+                    placeholder="Name"
                   />
-                  <button className="add-btn">Submit</button>
+                  <button className="btn-primary">Submit</button>
                 </form>
               </div>
             </div>

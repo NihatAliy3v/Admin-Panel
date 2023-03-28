@@ -1,6 +1,12 @@
 // Base
 @import "./base.scss";
 
+// Mixins
+@import "./mixins.scss";
+
+// Variable
+@import "./variable.scss";
+
 // Pages
 @import "./pages/home.scss";
 @import "./pages/catalog.scss";

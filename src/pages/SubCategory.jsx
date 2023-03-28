@@ -59,13 +59,13 @@ const SubCategory = () => {
               <div className="card">
                 <h2 className="card-title">Add New Sub Category</h2>
                 <form className="form" onSubmit={(e) => subCategorySubmit(e)}>
-                  <label htmlFor="subCategoryName">Name</label>
                   <Input
                     type="text"
                     name="subCategoryName"
                     value={subCategoryName}
                     onChange={(e) => setSubCategoryName(e.target.value)}
                     id="subCategoryName"
+                    placeholder="Name"
                   />
                   <select
                     className="select"
@@ -82,7 +82,7 @@ const SubCategory = () => {
                       </option>
                     ))}
                   </select>
-                  <button className="add-btn">Submit</button>
+                  <button className="btn-primary">Submit</button>
                 </form>
               </div>
             </div>
@@ -95,45 +95,6 @@ const SubCategory = () => {
         </div>
       </section>
     </main>
-    //     <div className="subCategory">
-    //     <h1>SubCategory</h1>
-    //     <Input
-    //       type="text"
-    //       name="subCategoryName"
-    //       value={subCategoryName}
-    //       onChange={(e) => setSubCategoryName(e.target.value)}
-    //       placeholder="SubCategoryName"
-    //     />
-    //     <select
-    //       value={categoryId}
-    //       onChange={(e) => setCategoryId(e.target.value)}
-    //     >
-    //       {dataCategory?.map((item, index) => (
-    //         <option key={index} value={item?.categoryId}>
-    //           {item?.categoryName}
-    //         </option>
-    //       ))}
-    //     </select>
-    //     <button onClick={(e) => subCategorySubmit(e)}>
-    //       SubCategory add
-    //     </button>
-    //     <br />
-    //     <br />
-
-    //     {subCategoryData?.map((item, index) => {
-    //       return (
-    //         <div key={index} className="map">
-    //           <p>{item?.subCategoryName}</p>
-    //           <button
-    //             className="btn"
-    //             onClick={() => subCategoryDelete(item?.subCategoryId)}
-    //           >
-    //             Delete
-    //           </button>
-    //         </div>
-    //       );
-    //     })}
-    //   </div>
   );
 };
 
